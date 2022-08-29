@@ -1,38 +1,198 @@
-.App {
+.attribution {
+  font-size: 11px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --prmry-clr-violet: hsl(257, 40%, 49%);
+  --prmry-clr-soft-magenta: hsl(300, 69%, 71%);
+  --prmry-clr-white: hsl(0, 0%, 95%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Outfit:wght@300;400;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Open Sans;
+}
+
+*,a,p {
+  color: var(--prmry-clr-white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.bg {
+
+  background-color: var(--prmry-clr-violet);
+  color: var(--prmry-clr-white);
+  align-items: centers;
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll;
+  box-sizing: border-box;;
+}
+
+.main-container {
+  background-image: url(images/bg-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-left: 30px;
+  padding-right: 30px
+}
+
+.main-container .logo-container {
+  padding-top: 20px;
+}
+
+.main-container .logo-container img {
+  height: 50px;
+  width: 147px;
+}
+
+h1 {
+  
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.main-container .huddle-hero-container {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  margin-top: 5px;
+  align-items: center;
+
+}
+
+.huddle-hero-container .hero-description {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+
+.hero-image {
+  margin-top: 20px;
+}
+
+.hero-image img {
+  height: 120px;
+  width: 245px;
+}
+.btn{
+  margin-top: 00px;
+  border-radius: 20px;
+  color: var(--prmry-clr-violet);
+  background-color: var(--prmry-clr-white);
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+}
+.btn:hover{
+  color: var(--prmry-clr-white);
+  background-color: var(--prmry-clr-soft-magenta);
+}
+
+.icon-bar {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
+  padding-bottom: 70px;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
+.icon-bar .facebook-logo,
+.icon-bar .instagram-logo,
+.icon-bar .twitter-logo {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  height: 31px;
+  justify-content: center;
+  width: 32px;
+  margin-left: 9px;
+  margin-right: 9px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.icon-bar .facebook-logo object,
+.icon-bar .twitter-logo object{
+  height: 26px;
+  width: 30px;
+}
+.icon-bar .instagram-logo object{
+  height: 28px;
+  width: 28px;
+}
+@media only screen and (min-width: 992px){
+  .main-container {
+      background-image: url(images/bg-desktop.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-bottom: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .main-container .logo-container img {
+      height: 124px;
+      width: 447px;
   }
+  .hero-image img{
+      height: 493px;
+      width: 650px;
+  }
+  .main-container .huddle-hero-container {
+      display: flex;
+      flex-direction: row;;           
+  }
+  .hero-description{
+      display: flex;
+      justify-content: center;
+      margin-left: 20px;
+      max-width: 526px;
+      flex-wrap: wrap;
+  }
+  h1{
+      line-height: 60px;
+      font-size: 45px; 
+      width: 505px;
+  }
+  h1, p {    
+      text-align: left;
+  }
+  p{
+      width: 526px;
+      font-size: 20px;
+  }
+  .btn{
+      height: 60px;
+      border-radius: 30px
+  }
+  .icon-bar{
+      justify-content: flex-end;
+      margin-top: 40px;
+      padding-right: 80px;
+      padding-bottom: 0%;
+  }
+
 }
