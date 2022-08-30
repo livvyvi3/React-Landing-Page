@@ -134,9 +134,22 @@ h1 {
   height: 28px;
   width: 28px;
 }
-
 .form-body{
-  text-align: left;
+  background-color: var(--prmry-clr-violet);
+  height: 100vh;
+}
+
+.form-container{  
+  width: 20%;
+  /* Center horizontally*/
+  margin: auto;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+  width: fit-content;
 }
 
 .form-body > *{
@@ -145,10 +158,12 @@ h1 {
 
 .form__label{
   width: 40%;
+  
 }
 
 .form_input{
   width: 60%;
+  padding-left: 20px;
 }
 @media only screen and (min-width: 992px){
   .main-container {
